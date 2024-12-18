@@ -1,5 +1,19 @@
 # DigitalLibrary
 
+# I developed the DigitalLibrary using the following technologies:
+
+1. Angular for the framework
+2. TypeScript for strong typing and scalable code
+3. Chart.js for data visualization with charts
+4. Bootstrap for responsive UI and styling
+5. CSS and HTML for custom styling and structure
+![image](https://github.com/user-attachments/assets/051837d8-4def-4746-b008-e97d02238375)
+![image](https://github.com/user-attachments/assets/3b0abc59-54bf-49c1-bb1f-48c3534589f4)
+![image](https://github.com/user-attachments/assets/eef981fe-4321-4dcf-817a-0cdb94efd98d)
+![image](https://github.com/user-attachments/assets/d202941b-b38e-40e6-a380-684cdc72ce15)
+
+[Design.pdf](https://github.com/user-attachments/files/18186494/Design.pdf)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 
 ## Development server
