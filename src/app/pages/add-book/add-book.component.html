@@ -1,0 +1,207 @@
+
+  <!-- Add Book Form -->
+  <div class="form-container">
+    <h2 class="form-title">Add Book</h2>
+    <form>
+      <div class="form-group">
+        <!-- ISBN Number -->
+      <div class="mb-3">
+        <label for="isbn" class="form-label fw-bold">ISBN Number *</label>
+        <input
+          type="text"
+          id="isbn"
+          name="isbn"
+          #isbn="ngModel"
+          class="form-control"
+          ngModel
+          required
+          minlength="5"
+          maxlength="50"
+          pattern="^[0-9]+$"  placeholder="Enter ISBN Number"
+        />
+        @if (isbn.invalid && isbn.touched) {
+          <div class="text-danger small">
+            @if (isbn.errors?.['required']) {
+              <div>ISBN is required.</div>
+            }
+            @if (isbn.errors?.['pattern']) {
+              <div>Only numbers are allowed.</div>
+            }
+            @if (isbn.errors?.['minlength']) {
+              <div>Minimum 5 characters required.</div>
+            }
+            @if (isbn.errors?.['maxlength']) {
+              <div>Maximum 50 characters allowed.</div>
+            }
+          </div>
+        }
+      </div>
+      </div>
+      <div class="form-group">
+             <!-- Name -->
+      <div class="mb-3">
+        <label for="name" class="form-label  fw-bold">Name *</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          #name="ngModel"
+          class="form-control"
+          ngModel
+          required
+          minlength="5"
+          maxlength="50"
+          pattern="^[a-zA-Z ]+$"
+          placeholder="Enter Book Name"
+        />
+        @if (name.invalid && name.touched) {
+          <div class="text-danger small">
+            @if (name.errors?.['required']) {
+              <div>Name is required.</div>
+            }
+            @if (name.errors?.['pattern']) {
+              <div>Only alphabets are allowed.</div>
+            }
+          </div>
+        }
+      </div>
+      </div>
+      <div class="form-group">
+          <!-- Author -->
+          <div class="mb-3">
+            <label for="author" class="form-label fw-bold">Author</label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              #author="ngModel"
+              class="form-control"
+              ngModel
+              maxlength="50"
+              placeholder="Enter Author Name"
+            />
+          </div>
+      </div>
+      <div class="form-group">
+    <!-- Publication -->
+    <div class="mb-3">
+        <label for="publication" class="form-label  fw-bold">Publication *</label>
+        <input
+          type="text"
+          id="publication"
+          name="publication"
+          #publication="ngModel"
+          class="form-control"
+          ngModel
+          required
+          minlength="5"
+          maxlength="50"
+          placeholder="Enter Publication"
+        />
+        @if (publication.invalid && publication.touched) {
+          <div class="text-danger small">
+            @if (publication.errors?.['required']) {
+              <div>Publication is required.</div>
+            }
+          </div>
+        }
+      </div>
+  </div>
+  <div class="form-group">
+      <!-- Details -->
+      <div class="mb-3">
+        <label for="details" class="form-label  fw-bold">Details *</label>
+        <textarea
+          id="details"
+          name="details"
+          #details="ngModel"
+          class="form-control"
+          rows="3"
+          ngModel
+          required
+          minlength="5"
+          maxlength="250"
+          placeholder="Enter Book Details"
+        ></textarea>
+        @if (details.invalid && details.touched) {
+          <div class="text-danger small">
+            <div>Details are required (5-250 characters).</div>
+          </div>
+        }
+      </div>
+  </div>
+  <div class="form-group">
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label for="quantity" class="form-label  fw-bold">Qty. *</label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          #quantity="ngModel"
+          class="form-control"
+          ngModel
+          required
+          min="1"
+          max="5"
+          placeholder="Enter Quantity"
+        />
+        @if (quantity.invalid && quantity.touched) {
+          <div class="text-danger small">
+            <div>Quantity must be between 1 and 5.</div>
+          </div>
+        }
+      </div>
+  </div>
+  <div class="form-group">
+      <!-- Price -->
+      <div class="mb-3">
+        <label for="price" class="form-label  fw-bold">Price *</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          #price="ngModel"
+          class="form-control"
+          ngModel
+          required
+          min="5"
+          max="9999"
+          placeholder="Enter Price"
+        />
+        @if (price.invalid && price.touched) {
+          <div class="text-danger small">
+            <div>Price must be at least 5.</div>
+          </div>
+        }
+      </div>
+    </div>
+    <div class="form-group">
+      <!-- Branch -->
+      <div class="mb-3">
+        <label for="branch" class="form-label  fw-bold">Branch *</label>
+        <select
+          id="branch"
+          name="branch"
+          #branch="ngModel"
+          class="form-control"
+          ngModel
+          required
+        >
+          <option value="" disabled selected>Select Branch</option>
+          <option value="IT">IT</option>
+          <option value="Civil">Civil</option>
+          <option value="Mechanical">Mechanical</option>
+        </select>
+        @if (branch.invalid && branch.touched) {
+          <div class="text-danger small">
+            <div>Branch is required.</div>
+          </div>
+        }
+      </div>
+      </div>
+      <div class="submit-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>

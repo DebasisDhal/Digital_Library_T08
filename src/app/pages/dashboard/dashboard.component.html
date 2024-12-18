@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Dashboard</h2>
+            <ul>
+                <li><span>➕</span> Add Book</li>
+                <li><span>❌</span> Delete Book</li>
+                <li><span>📄</span> View Books</li>
+                <li><span>👤</span> Add Student</li>
+                <li><span>📝</span> Issue Book</li>
+                <li><span>🔄</span> Return Book</li>
+                <li><span>📊</span> Report</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="charts-container">
+                <div class="chart">
+                    <h3>No. Of Books</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart">
+                    <h3>No. Of Books</h3>
+                    
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Issued Book Table -->
+            <div class="table-container">
+                <h3>Issued Book Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ISBN</th>
+                            <th>Book Name</th>
+                            <th>Author</th>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Issued On</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows -->
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
+
+
